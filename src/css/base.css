@@ -1,0 +1,93 @@
+@import '../css/reset.css';
+@import '../css/fonts.css';
+@import '../css/houdinida.css';
+
+:root {
+  --color-dark: hsl(0, 0%, 1%);
+  --color-light: hsl(255, 255%, 255%);
+  --color-alpha-dark: hsl(220, 16%, 4%);
+
+  /* Text shadow */
+  --text-shadow: 0px var(--size-4) var(--size-4) rgba(29, 49, 84, 0.1);
+
+  /* Gradients */
+  --gradient-light: linear-gradient(180deg, var(--color-light) 0%, hsl(245, 52%, 95%) 100%);
+
+  /* Timing functions */
+  --ease-elastic-1: cubic-bezier(.5, 1.75, .75, 1.25);
+  
+  /* Sizes */
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-48: 3rem;
+  --size-56: 3.5rem;
+  --size-60: 3.75rem;
+
+  /* Timing */
+  --time-1: 0.15s;
+  --time-2: 0.2s;
+  --time-3: 0.3s;
+  --time-4: 0.4s;
+}
+
+html {
+  font-family: 'figtree', system-ui, sans-serif;
+  background: var(--color-dark);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 22.5rem;
+  color: var(--color-light);
+}
+
+::placeholder {
+  color: hsla(215, 50%, 13%, 0.44);
+}
+
+*:focus-visible {
+  outline: var(--size-4) solid var(--color-light);
+  outline-offset: var(--size-4);
+}
+
+a {
+  --offset: 0.15em;
+
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: var(--offset);
+  transition: --offset var(--ease-elastic-1) var(--time-1);
+}
+
+a:focus-visible {
+  text-decoration: none;
+}
+
+@media (hover) {
+  a:hover {
+    --offset: 0.3em;
+  }
+
+  @supports not (background: paint(something)) {
+    a {
+      text-underline-offset: 0.15em;
+      transition: text-underline-offset var(--ease-elastic-1) var(--time-1);
+    }
+
+    a:hover {
+      text-underline-offset: 0.3em;
+    }
+  }
+}
+
+.text-align-center {
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'figtree';
+  src: local("Figtree Regular"), local("Figtree-Regular"),
+    local("Figtree_Regular"), url('/fonts/figtree-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'figtree';
+  src: local("Figtree SemiBold"), local("Figtree-SemiBold"),
+    local("Figtree_SemiBold"), url('/fonts/figtree-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'figtree';
+  src: local("Figtree Bold"), local("Figtree-Bold"),
+    local("Figtree_Bold"), url('/fonts/figtree-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'figtree';
+  src: local("Figtree Black"), local("Figtree-Black"),
+    local("Figtree_Black"), url('/fonts/figtree-900.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

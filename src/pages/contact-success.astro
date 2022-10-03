@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Background from '../components/Background.vue'
+import Heading from '../components/Heading.vue'
+import Text from '../components/Text.vue'
+import Section from '../components/Section.vue'
+import Container from '../components/Container.vue'
+---
+
+<Layout title="Jeroen van Beek - Freelance Frontend Developer">
+  <Background />
+  <Section class="text-align-center">
+    <Container>
+      <Heading level="1">
+        Bedankt!
+      </Heading>
+      <Text>
+        Ik zal zo spoedig mogelijk reageren op je bericht.
+      </Text>
+      <a href="/">Terug</a>
+    </Container>
+  </Section>
+</Layout>

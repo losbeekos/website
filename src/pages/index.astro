@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Background from '../components/Background.vue'
+import Nav from '../components/Nav.vue'
+import Heading from '../components/Heading.vue'
+import Section from '../components/Section.vue'
+import Container from '../components/Container.vue'
+import Text from '../components/Text.vue'
+import Avatar from '../components/Avatar.vue'
+import Card from '../components/card/Card.vue'
+import CardContainer from '../components/card/CardContainer.vue'
+import CardFooter from '../components/card/CardFooter.vue'
+import IconText from '../components/IconText.vue'
+import Button from '../components/Button.vue'
+import FormRow from '../components/form/Row.vue'
+import FormInput from '../components/form/Input.vue'
+import FormTextarea from '../components/form/Textarea.vue'
+import FormLabel from '../components/form/Label.vue'
+import FormAction from '../components/form/Action.vue'
+import MyAge from '../components/MyAge.vue'
+---
+
+<Layout title="Jeroen van Beek - Freelance frontend developer - Losbeekos">
+  <Background />
+  <Nav />
+  <main>
+    <Section>
+      <Container class="text-align-center" size="37.5rem">
+        <Heading level="1">Jeroen<wbr />&nbsp;van&nbsp;Beek&nbsp;</Heading>
+        <Text>Freelance frontend developer</Text>
+        <Avatar />
+      </Container>
+    </Section>
+    <Section id="over-mij">
+      <Container size="37.5rem">
+        <Heading level="2">Even voorstellen</Heading>
+        <Text>
+          Jeroen, <MyAge /> jaar, getrouwd en vader van een dochter. Brabander woonachtig in het oosten van het land. Inmiddels 14 jaar ervaring als frontend developer en werzaam geweest bij verschillende internetbureaus door het land.
+        </Text>
+        <Text>
+          Gepassioneerd in mijn vak waar ik altijd het beste uit mezelf en het team probeer te halen.
+          Met de grootste zorg bouw ik aan Vue en Angular webapps voor klanten waar gebruiksvriendelijkheid en performance mijn speerpunten zijn.
+        </Text>
+        <Text>
+          Wil je je team uitbreiden en zoek je iemand met veel ervaring? Neem dan <a href="#contact">contact op</a>.
+        </Text>
+      </Container>
+    </Section>
+    <Section id="ervaring">
+      <Container size="75rem">
+        <Heading class="text-align-center" level="2">Mijn werk&shy;ervaring</Heading>
+      </Container>
+      <CardContainer>
+        <Card>
+          <header>
+            <Heading level="3">Senior Frontend Developer</Heading>
+            <p>bij Nerds & Company</p>
+          </header>
+          <div>
+            <Heading level="4">Gebruikte tech</Heading>
+            <p>Vue, Nuxt, Vuex, Angular, RxJS, Ionic Angular, NativeScript Angular, TypeScript, JavaScript, HTML, (S)CSS, Jest, Cypress</p>
+          </div>
+          <CardFooter>
+            <IconText icon="compass">
+              Enschede / Hybrid
+            </IconText>
+            <IconText icon="timer">
+              2016 t/m 2022
+            </IconText>
+          </CardFooter>
+        </Card>
+        <Card>
+          <header>
+            <Heading level="3">Senior Frontend Developer</Heading>
+            <p>bij Coolminds</p>
+          </header>
+          <div>
+            <Heading level="4">Gebruikte tech</Heading>
+            <p>Vue, Ionic Angular, JavaScript, HTML, (S)CSS</p>
+          </div>
+          <CardFooter>
+            <IconText icon="compass">
+              Leeuwarden
+            </IconText>
+            <IconText icon="timer">
+              2013 t/m 2016
+            </IconText>
+          </CardFooter>
+        </Card>
+        <Card>
+          <header>
+            <Heading level="3">Junior/Medior Frontend Developer</Heading>
+            <p>bij Freshheads</p>
+          </header>
+          <div>
+            <Heading level="4">Gebruikte tech</Heading>
+            <p>JavaScript, jQuery, HTML, (S)CSS</p>
+          </div>
+          <CardFooter>
+            <IconText icon="compass">
+              Tilburg
+            </IconText>
+            <IconText icon="timer">
+              2009 t/m 2013
+            </IconText>
+          </CardFooter>
+        </Card>
+      </CardContainer>
+    </Section>
+    <Section id="contact">
+      <Container size="35rem">
+        <Heading level="2">Neem contact op</Heading>
+        <Text>
+          Je kan onderstaand formulier gebruiken of een bericht sturen op <a href="https://www.linkedin.com/in/losbeekos/" rel="nofollow noreferrer">Linkedin</a>.
+        </Text>
+      </Container>
+      <Container size="29rem">
+        <form name="contact" action="/contact-success" method="POST" data-netlify="true">
+          <FormRow>
+            <FormLabel for="name">Naam</FormLabel>
+            <FormInput id="name" name="name" placeholder="Piet Jansen" required="true" />
+          </FormRow>
+          <FormRow>
+            <FormLabel for="email">E-mailadres</FormLabel>
+            <FormInput id="email" type="email" name="emailaddress" placeholder="piet@jansen.nl" required="true" />
+          </FormRow>
+          <FormRow>
+            <FormLabel for="phonenumber" optional="true">Telefoonnummer</FormLabel>
+            <FormInput id="phonenumber" type="phone" name="phonenumber" placeholder="0612345678" />
+          </FormRow>
+          <FormRow>
+            <FormLabel for="message">Bericht</FormLabel>
+            <FormTextarea id="message" name="message" required="true" />
+          </FormRow>
+          <FormAction>
+            <Button type="submit">
+              Versturen
+            </Button>
+          </FormAction>
+        </form>
+      </Container>
+    </Section>
+  </main>
+</Layout>
