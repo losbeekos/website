@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://losbeekos.com"
+  to = "https://losbeekos.nl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.losbeekos.com"
+  to = "https://losbeekos.nl"
+  status = 301
+  force = true
