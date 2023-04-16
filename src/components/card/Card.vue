@@ -26,12 +26,13 @@
     width: clamp(18rem, calc(1rem + 80vw), 33.5rem);
   }
 
-  .card-container > .card:not(:nth-child(2)) {
+  .card-container > .card {
     margin-right: auto;
   }
 
-  .card-container > .card:nth-child(2) {
+  .card-container > .card:nth-child(2n) {
     margin-left: auto;
+    margin-right: unset;
   }
 }
 </style>
