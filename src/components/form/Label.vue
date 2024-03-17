@@ -9,10 +9,12 @@
 
 <script setup lang="ts">
 interface Props {
-  optional: boolean;
+  optional?: boolean;
 };
 
-const props = defineProps<Props>();
+withDefaults(defineProps<Props>(), {
+  optional: false,
+});
 </script>
 
 <style scoped>

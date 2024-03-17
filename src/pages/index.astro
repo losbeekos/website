@@ -154,19 +154,19 @@ import MyAge from '../components/MyAge.vue'
         <form name="contact" action="/contact-success" method="POST" data-netlify="true">
           <FormRow>
             <FormLabel for="name">Naam</FormLabel>
-            <FormInput id="name" name="name" placeholder="Piet Jansen" required="true" />
+            <FormInput id="name" name="name" placeholder="Piet Jansen" :required="true" />
           </FormRow>
           <FormRow>
             <FormLabel for="email">E-mailadres</FormLabel>
-            <FormInput id="email" type="email" name="emailaddress" placeholder="piet@jansen.nl" required="true" />
+            <FormInput id="email" type="email" name="emailaddress" placeholder="piet@jansen.nl" :required="true" />
           </FormRow>
           <FormRow>
-            <FormLabel for="phonenumber" optional="true">Telefoonnummer</FormLabel>
+            <FormLabel for="phonenumber" :optional="true">Telefoonnummer</FormLabel>
             <FormInput id="phonenumber" type="phone" name="phonenumber" placeholder="0612345678" />
           </FormRow>
           <FormRow>
             <FormLabel for="message">Bericht</FormLabel>
-            <FormTextarea id="message" name="message" required="true" />
+            <FormTextarea id="message" name="message" :required="true" />
           </FormRow>
           <FormAction>
             <Button type="submit">
