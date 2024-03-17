@@ -12,9 +12,7 @@ interface Props {
   optional?: boolean;
 };
 
-withDefaults(defineProps<Props>(), {
-  optional: false,
-});
+defineProps<Props>();
 </script>
 
 <style scoped>
