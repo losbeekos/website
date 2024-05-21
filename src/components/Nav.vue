@@ -2,7 +2,6 @@
   <header class="header">
     <nav class="nav">
       <a class="link" href="#over-mij">voorstellen</a>
-      <a class="link" href="#ervaring">werkervaring</a>
       <a class="link" href="#contact">contact</a>
     </nav>
   </header>
